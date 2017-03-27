@@ -1,0 +1,264 @@
+Started GET "/" for ::1 at 2017-03-27 10:45:56 -0300
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsuarios (20170327133139)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "usuario" varchar, "nombre" varchar, "apellido" varchar, "twitter" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170327133139"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-03-27 13:46:26 UTC], ["updated_at", 2017-03-27 13:46:26 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2017-03-27 10:46:33 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/Sofi/.rvm/gems/ruby-2.4.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Sofi/.rvm/gems/ruby-2.4.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb (3.6ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuario" for ::1 at 2017-03-27 11:32:16 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsuariosController#index as */*
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unknown validator: 'MessageValidator'):
+  
+app/models/usuario.rb:2:in `<class:Usuario>'
+app/models/usuario.rb:1:in `<top (required)>'
+app/controllers/usuarios_controller.rb:29:in `index'
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/usuario" for ::1 at 2017-03-27 11:36:53 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsuariosController#index as */*
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unknown validator: 'MessageValidator'):
+  
+app/models/usuario.rb:2:in `<class:Usuario>'
+app/models/usuario.rb:1:in `<top (required)>'
+app/controllers/usuarios_controller.rb:29:in `index'
+Started GET "/usuario" for ::1 at 2017-03-27 11:40:17 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsuariosController#index as */*
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/usuario" for ::1 at 2017-03-27 11:41:45 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"nombre"=>"Sofia", "usuario"=>"sizambrano", "apellido"=>"Zambrano"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "usuarios" ("usuario", "nombre", "apellido", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["usuario", "sizambrano"], ["nombre", "Sofia"], ["apellido", "Zambrano"], ["created_at", 2017-03-27 14:41:45 UTC], ["updated_at", 2017-03-27 14:41:45 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 2.3ms)
+
+
+  
+NoMethodError (undefined method `respond_to' for #<UsuariosController:0x007ff5a1e3e628>
+Did you mean?  respond_to?):
+  
+app/controllers/usuarios_controller.rb:36:in `create'
+Started PUT "/usuario" for ::1 at 2017-03-27 11:44:55 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"nombre"=>"Sofia", "usuario"=>"sizambrano", "apellido"=>"Zambrano"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "usuarios" ("usuario", "nombre", "apellido", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["usuario", "sizambrano"], ["nombre", "Sofia"], ["apellido", "Zambrano"], ["created_at", 2017-03-27 14:45:05 UTC], ["updated_at", 2017-03-27 14:45:05 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `json_reponse' for #<UsuariosController:0x007ff5a1bff010>
+Did you mean?  json_response):
+  
+app/controllers/usuarios_controller.rb:30:in `create'
+Started PUT "/usuario" for ::1 at 2017-03-27 11:45:46 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"nombre"=>"Sofia", "usuario"=>"sizambrano", "apellido"=>"Zambrano"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "usuarios" ("usuario", "nombre", "apellido", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["usuario", "sizambrano"], ["nombre", "Sofia"], ["apellido", "Zambrano"], ["created_at", 2017-03-27 14:45:46 UTC], ["updated_at", 2017-03-27 14:45:46 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 1.4ms)
+
+
+Started PUT "/usuario" for ::1 at 2017-03-27 11:47:02 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"nombre"=>"Sofia", "apellido"=>"Zambrano", "usuario"=>{"nombre"=>"Sofia", "apellido"=>"Zambrano"}}
+Unpermitted parameter: usuario
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 9ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/usuario" for ::1 at 2017-03-27 11:47:38 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"nombre"=>"Sofia", "apellido"=>"Zambrano", "usuario"=>{"nombre"=>"Sofia", "apellido"=>"Zambrano"}}
+Unpermitted parameter: usuario
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/usuario" for ::1 at 2017-03-27 11:48:32 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>"sizambrano", "apellido"=>"Zambrano"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/usuario" for ::1 at 2017-03-27 11:48:42 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>"sizambrano", "apellido"=>"Zambrano"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/usuario/3" for ::1 at 2017-03-27 11:49:14 -0300
+Processing by UsuariosController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/usuario/1" for ::1 at 2017-03-27 11:49:18 -0300
+Processing by UsuariosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/usuario/2" for ::1 at 2017-03-27 11:49:27 -0300
+Processing by UsuariosController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/usuario/4" for ::1 at 2017-03-27 11:49:35 -0300
+Processing by UsuariosController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/usuario" for ::1 at 2017-03-27 11:53:20 -0300
+Processing by UsuariosController#index as */*
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/usuario/3" for ::1 at 2017-03-27 11:54:05 -0300
+Processing by UsuariosController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "usuarios" WHERE "usuarios"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 3ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/usuario" for ::1 at 2017-03-27 11:54:16 -0300
+Processing by UsuariosController#index as */*
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/usuario/2" for ::1 at 2017-03-27 11:54:22 -0300
+Processing by UsuariosController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "usuarios" WHERE "usuarios"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 4ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/usuario" for ::1 at 2017-03-27 11:55:11 -0300
+Processing by UsuariosController#index as */*
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/usuario" for ::1 at 2017-03-27 11:55:19 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>"imarquezc", "nombre"=>"Ignacio", "apellido"=>"Marquez"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "usuarios" ("usuario", "nombre", "apellido", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["usuario", "imarquezc"], ["nombre", "Ignacio"], ["apellido", "Marquez"], ["created_at", 2017-03-27 14:55:19 UTC], ["updated_at", 2017-03-27 14:55:19 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/usuario/4" for ::1 at 2017-03-27 11:56:34 -0300
+Processing by UsuariosController#update as HTML
+  Parameters: {"id"=>"4", "usuario"=>{"id"=>"4"}}
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameters: id, usuario
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/usuario/4" for ::1 at 2017-03-27 11:57:06 -0300
+Processing by UsuariosController#update as HTML
+  Parameters: {"twitter"=>"imarquezc", "id"=>"4", "usuario"=>{"twitter"=>"imarquezc"}}
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameters: id, usuario
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "usuarios" SET "twitter" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?[0m  [["twitter", "imarquezc"], ["updated_at", 2017-03-27 14:57:06 UTC], ["id", 4]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.1ms)
+
+
