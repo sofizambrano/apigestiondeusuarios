@@ -262,3 +262,56 @@ Unpermitted parameters: id, usuario
 Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.1ms)
 
 
+  [1m[35m (15.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5371727822392431675);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsuarios (20170327133139)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" serial primary key, "usuario" character varying, "nombre" character varying, "apellido" character varying, "twitter" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170327133139"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-03-27 17:42:15 UTC], ["updated_at", 2017-03-27 17:42:15 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5371727822392431675)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/usuario" for ::1 at 2017-03-27 14:44:36 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsuariosController#index as */*
+  [1m[36mUsuario Load (1.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+Completed 200 OK in 25ms (Views: 2.6ms | ActiveRecord: 7.8ms)
+
+
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+Started PUT "/usuario" for ::1 at 2017-03-27 14:46:08 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>"sizambrano", "nombre"=>"Sofia", "apellido"=>"Zambrano"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "usuarios" ("usuario", "nombre", "apellido", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["usuario", "sizambrano"], ["nombre", "Sofia"], ["apellido", "Zambrano"], ["created_at", 2017-03-27 17:46:08 UTC], ["updated_at", 2017-03-27 17:46:08 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/usuario/1" for ::1 at 2017-03-27 14:46:35 -0300
+Processing by UsuariosController#update as HTML
+  Parameters: {"nombre"=>"Sofía", "id"=>"1", "usuario"=>{"nombre"=>"Sofía"}}
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: id, usuario
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "usuarios" SET "nombre" = $1, "updated_at" = $2 WHERE "usuarios"."id" = $3[0m  [["nombre", "Sofía"], ["updated_at", 2017-03-27 17:46:35 UTC], ["id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 2.2ms)
+
+
+Started PUT "/usuario" for ::1 at 2017-03-27 14:47:00 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>"imarquezc", "nombre"=>"Ignacio", "apellido"=>"Márquez"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("usuario", "nombre", "apellido", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["usuario", "imarquezc"], ["nombre", "Ignacio"], ["apellido", "Márquez"], ["created_at", 2017-03-27 17:47:00 UTC], ["updated_at", 2017-03-27 17:47:00 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
