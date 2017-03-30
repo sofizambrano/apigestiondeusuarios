@@ -8,8 +8,13 @@ class UsuariosController < ApplicationController
 
   # POST /usuario/:id
   def update
-    @usuario.update(usuario_params)
-    json_response(@usuario)
+    current_query_string = URI(request.url).query
+    if current_query_string.include? "id"
+      json_response({ error: 'id no es modificable' }, :bad_request)
+    else
+      @usuario.update(usuario_params)
+      json_response(@usuario)
+    end
   end
 
   # DELETE /usuario/:id
@@ -21,13 +26,22 @@ class UsuariosController < ApplicationController
   # GET /usuario
   def index
     @usuarios = Usuario.all
-    json_response(@usuarios)
+    json_response({'usuarios' => @usuarios }.merge('total' => @usuarios.count))
   end
 
   # PUT /usuario
   def create
-    @usuario = Usuario.create!(usuario_params)
-    json_response(@usuario)
+    body_request = request.raw_post
+    if body_request.include? '"id"'
+      json_response({ error: 'No se puede crear usuario con id' }, :bad_request)
+    else
+      @usuario = Usuario.new(usuario_params)
+      if @usuario.save
+        json_response(@usuario, :created)
+      else
+        json_response({ error: 'La creación ha fallado' }, :internal_server_error)
+      end
+    end
   end
 
   private
