@@ -1811,3 +1811,306 @@ puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
 puma (3.8.2) lib/puma/server.rb:435:in `process_client'
 puma (3.8.2) lib/puma/server.rb:299:in `block in run'
 puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/usuario" for ::1 at 2017-03-30 08:52:07 -0300
+  
+ActiveRecord::NoDatabaseError (FATAL:  role "apigestiondeusuarios" does not exist
+):
+  
+activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:675:in `rescue in connect'
+activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
+activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:729:in `new_connection'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:773:in `checkout_new_connection'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:752:in `try_to_checkout_new_connection'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:713:in `acquire_connection'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:490:in `checkout'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:883:in `retrieve_connection'
+activerecord (5.0.2) lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+activerecord (5.0.2) lib/active_record/connection_handling.rb:91:in `connection'
+activerecord (5.0.2) lib/active_record/migration.rb:559:in `connection'
+activerecord (5.0.2) lib/active_record/migration.rb:546:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/usuario" for ::1 at 2017-03-30 09:10:30 -0300
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5371727822392431675);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsuarios (20170327133139)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" serial primary key, "usuario" character varying, "nombre" character varying, "apellido" character varying, "twitter" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170327133139"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RemoveTimestampsFromUsuarios (20170330120323)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "usuarios" DROP "created_at"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "usuarios" DROP "updated_at"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170330120323"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-03-30 12:10:53 UTC], ["updated_at", 2017-03-30 12:10:53 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5371727822392431675)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/usuario" for ::1 at 2017-03-30 09:11:33 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsuariosController#index as */*
+  Parameters: {"usuario"=>{}}
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+[active_model_serializers]   [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.73ms)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 2.1ms)
+
+
+Started PUT "/usuario" for ::1 at 2017-03-30 09:12:03 -0300
+Processing by UsuariosController#create as */*
+  Parameters: {"nombre"=>"Juan", "apellido"=>"Pérez", "usuario"=>"jperez", "twitter"=>"jperez1990"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "usuarios" ("usuario", "nombre", "apellido", "twitter") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["usuario", "jperez"], ["nombre", "Juan"], ["apellido", "Pérez"], ["twitter", "jperez1990"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered UsuarioSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 201 Created in 21ms (Views: 10.3ms | ActiveRecord: 4.2ms)
+
+
+Started PUT "/usuario" for ::1 at 2017-03-30 09:12:29 -0300
+Processing by UsuariosController#create as */*
+  Parameters: {"nombre"=>"Juan Ignacio", "apellido"=>"Márquez", "usuario"=>"imarquezc", "twitter"=>"imarquezc"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("usuario", "nombre", "apellido", "twitter") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["usuario", "imarquezc"], ["nombre", "Juan Ignacio"], ["apellido", "Márquez"], ["twitter", "imarquezc"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered UsuarioSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 201 Created in 5ms (Views: 1.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/usuario" for ::1 at 2017-03-30 09:12:34 -0300
+Processing by UsuariosController#index as */*
+  Parameters: {"usuario"=>{}}
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+[active_model_serializers]   [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.37ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/usuario/2" for ::1 at 2017-03-30 09:13:33 -0300
+Processing by UsuariosController#update as */*
+  Parameters: {"nombre"=>nil, "apellido"=>"Márquez", "usuario"=>"imarquezc", "twitter"=>"imarquezc", "id"=>"2"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `include?' for nil:NilClass):
+  
+app/controllers/usuarios_controller.rb:12:in `update'
+Started POST "/usuario/2" for ::1 at 2017-03-30 09:15:52 -0300
+Processing by UsuariosController#update as */*
+  Parameters: {"nombre"=>nil, "apellido"=>"Márquez", "usuario"=>"imarquezc", "twitter"=>"imarquezc", "id"=>"2"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameter: id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered UsuarioSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 18ms (Views: 2.1ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/usuario/2" for ::1 at 2017-03-30 09:18:40 -0300
+Processing by UsuariosController#update as */*
+  Parameters: {"nombre"=>nil, "apellido"=>"Márquez", "usuario"=>"imarquezc", "twitter"=>"imarquezc", "id"=>"2"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameter: id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered UsuarioSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 9ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/usuario/2" for ::1 at 2017-03-30 09:19:00 -0300
+Processing by UsuariosController#update as */*
+  Parameters: {"nombre"=>nil, "apellido"=>"Márquez", "usuario"=>{"usuario"=>nil, "nombre"=>nil, "apellido"=>"Márquez", "twitter"=>"imarquezc"}, "twitter"=>"imarquezc", "id"=>"2"}
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameters: usuario, id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered UsuarioSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 200 OK in 8ms (Views: 1.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/usuario/2" for ::1 at 2017-03-30 09:19:02 -0300
+Processing by UsuariosController#update as */*
+  Parameters: {"nombre"=>nil, "apellido"=>"Márquez", "usuario"=>{"usuario"=>nil, "nombre"=>nil, "apellido"=>"Márquez", "twitter"=>"imarquezc"}, "twitter"=>"imarquezc", "id"=>"2"}
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameters: usuario, id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered UsuarioSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/usuario/2" for ::1 at 2017-03-30 09:19:27 -0300
+Processing by UsuariosController#update as */*
+  Parameters: {"nombre"=>"Juan Ignacio", "apellido"=>"Márquez", "usuario"=>"imarquezc", "twitter"=>"imarquezc", "id"=>"2"}
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameter: id
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered UsuarioSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/usuario/2" for ::1 at 2017-03-30 09:19:36 -0300
+Processing by UsuariosController#update as */*
+  Parameters: {"nombre"=>"Juan Ignacio", "apellido"=>"Márquez", "usuario"=>{"usuario"=>nil, "nombre"=>"Juan Ignacio", "apellido"=>"Márquez", "twitter"=>"imarquezc"}, "twitter"=>"imarquezc", "id"=>"2"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameters: usuario, id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered UsuarioSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/usuario/2" for ::1 at 2017-03-30 09:21:08 -0300
+Processing by UsuariosController#update as */*
+  Parameters: {"nombre"=>"Juan Ignacio", "apellido"=>"Márquez", "usuario"=>{"usuario"=>nil, "nombre"=>"Juan Ignacio", "apellido"=>"Márquez", "twitter"=>"imarquezc"}, "twitter"=>"imarquezc", "id"=>"2"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameters: usuario, id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered UsuarioSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 200 OK in 7ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/usuario/2" for ::1 at 2017-03-30 09:21:20 -0300
+Processing by UsuariosController#update as */*
+  Parameters: {"nombre"=>"Juan Ignacio", "apellido"=>"Márquez", "usuario"=>{"usuario"=>nil, "nombre"=>"Juan Ignacio", "apellido"=>"Márquez", "twitter"=>"imarquezc"}, "twitter"=>"imarquezc", "id"=>"2"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `incude?' for #<String:0x007fe0449059a8>
+Did you mean?  include?):
+  
+app/controllers/usuarios_controller.rb:12:in `update'
+Started POST "/usuario/2" for ::1 at 2017-03-30 09:23:57 -0300
+  
+SyntaxError (/Users/Sofi/Desktop/apigestiondeusuarios/app/controllers/usuarios_controller.rb:61: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/usuarios_controller.rb:61: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/usuario/2" for ::1 at 2017-03-30 09:24:25 -0300
+Processing by UsuariosController#update as */*
+  Parameters: {"nombre"=>"Juan Ignacio", "apellido"=>"Márquez", "usuario"=>{"usuario"=>nil, "nombre"=>"Juan Ignacio", "apellido"=>"Márquez", "twitter"=>"imarquezc"}, "twitter"=>"imarquezc", "id"=>"2"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 500 Internal Server Error in 8ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/usuario/3" for ::1 at 2017-03-30 09:25:24 -0300
+Processing by UsuariosController#update as */*
+  Parameters: {"nombre"=>"Juan Ignacio", "apellido"=>"Márquez", "usuario"=>{"usuario"=>nil, "nombre"=>"Juan Ignacio", "apellido"=>"Márquez", "twitter"=>"imarquezc"}, "twitter"=>"imarquezc", "id"=>"3"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 404 Not Found in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/usuario" for ::1 at 2017-03-30 09:27:34 -0300
+  
+SyntaxError (/Users/Sofi/Desktop/apigestiondeusuarios/app/controllers/usuarios_controller.rb:44: syntax error, unexpected keyword_rescue, expecting keyword_end
+    rescue Exception
+          ^
+/Users/Sofi/Desktop/apigestiondeusuarios/app/controllers/usuarios_controller.rb:59: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/usuarios_controller.rb:44: syntax error, unexpected keyword_rescue, expecting keyword_end
+app/controllers/usuarios_controller.rb:59: syntax error, unexpected end-of-input, expecting keyword_end
+Started PUT "/usuario" for ::1 at 2017-03-30 09:28:16 -0300
+Processing by UsuariosController#create as */*
+  Parameters: {"nombre"=>"Sofía", "apellido"=>"Zambrano", "usuario"=>"sizambrano"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("usuario", "nombre", "apellido") VALUES ($1, $2, $3) RETURNING "id"[0m  [["usuario", "sizambrano"], ["nombre", "Sofía"], ["apellido", "Zambrano"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered UsuarioSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 201 Created in 8ms (Views: 1.6ms | ActiveRecord: 1.1ms)
+
+
+Started PUT "/usuario" for ::1 at 2017-03-30 09:28:33 -0300
+Processing by UsuariosController#create as */*
+  Parameters: {"nombre"=>"Sofía", "apellido"=>"Zambrano", "usuario"=>"sizambrano"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 500 Internal Server Error in 7ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuario" for ::1 at 2017-03-30 09:29:11 -0300
+Processing by UsuariosController#index as */*
+  Parameters: {"usuario"=>{}}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "usuarios"[0m
+[active_model_serializers]   [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.13ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.6ms)
+
+
