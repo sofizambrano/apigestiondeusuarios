@@ -26,7 +26,7 @@ class UsuariosController < ApplicationController
   # GET /usuario
   def index
     @usuarios = Usuario.all
-    json_response({'usuarios' => @usuarios }.merge('total' => @usuarios.count))
+    json_response({'usuarios' => @usuarios, 'total' => @usuarios.count})
   end
 
   # PUT /usuario
