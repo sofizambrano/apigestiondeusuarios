@@ -49,7 +49,7 @@ class UsuariosController < ApplicationController
 
   def usuario_params
     # whitelist params
-    params.permit(:usuario, :nombre, :apellido, :twitter)
+    params.permit(:id, :usuario, :nombre, :apellido, :twitter)
   end
 
   def set_usuario
